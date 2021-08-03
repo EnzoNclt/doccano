@@ -7,15 +7,12 @@
     <v-row no-gutters>
       <v-btn-toggle>
         <!-- Undo Redo -->
-        <button-undo
-          @click:undo="undoAction()"
-          @shortkey:undo="undoAction()"
+        <button-undo-redo
+          @click:undo="$emit('click:undo')"
+          @shortkey:undo="$emit('shortkey:undo')"
+          @click:redo="$emit('click:redo')"
+          @shortkey:redo="$emit('shortkey:redo')"
         />
-        <button-redo
-          @click:redo="redoAction()"
-          @shortkey:redo="redoAction()"
-        />
-
         <button-review
           v-if="showApproveButton"
           :is-reviewd="isReviewd"
@@ -93,8 +90,7 @@ import ButtonFilter from './buttons/ButtonFilter.vue'
 import ButtonGuideline from './buttons/ButtonGuideline.vue'
 import ButtonPagination from './buttons/ButtonPagination.vue'
 import ButtonReview from './buttons/ButtonReview.vue'
-import ButtonUndo from './buttons/ButtonUndo.vue'
-import ButtonRedo from './buttons/ButtonRedo.vue'
+import ButtonUndoRedo from './buttons/ButtonUndoRedo.vue'
 import FormAutoLabeling from './forms/FormAutoLabeling.vue'
 import FormClearLabel from './forms/FormClearLabel.vue'
 import FormComment from './forms/FormComment.vue'
@@ -109,8 +105,7 @@ export default Vue.extend({
     ButtonGuideline,
     ButtonPagination,
     ButtonReview,
-    ButtonUndo,
-    ButtonRedo,
+    ButtonUndoRedo,
     FormAutoLabeling,
     FormClearLabel,
     FormComment,
@@ -191,14 +186,7 @@ export default Vue.extend({
       } else {
         this.$emit('update:enable-auto-labeling', false)
       }
-    },
-    undoAction() {
-      console.log("Undo")
-    },
-    redoAction() {
-      console.log("Redo")
     }
-
   }
 })
 </script>

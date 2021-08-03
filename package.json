@@ -4,5 +4,9 @@
     },
     "scripts": {
         "heroku-postbuild": "sh tools/heroku.sh build"
+    },
+    "dependencies": {
+        "undo-redo-vuex": "^1.4.0",
+        "vuex": "^3.6.2"
     }
 }
