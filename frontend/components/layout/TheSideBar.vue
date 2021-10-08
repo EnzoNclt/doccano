@@ -76,6 +76,12 @@ export default {
           isVisible: this.role.is_project_admin
         },
         {
+          icon: 'mdi-lightbulb',
+          text: 'Training',
+          link: 'training',
+          isVisible: this.role.is_project_admin
+        },
+        {
           icon: 'label',
           text: this.$t('labels.labels'),
           link: 'labels',

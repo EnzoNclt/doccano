@@ -8,7 +8,10 @@
         Project
       </v-tab>
       <v-tab href="#tab-auto-labeling" class="text-capitalize">
-        Auto Labeling
+        Auto Labeling - Prediction
+      </v-tab>
+      <v-tab href="#tab-auto-labeling-training" class="text-capitalize">
+        Auto Labeling - Training
       </v-tab>
     </v-tabs>
     <v-divider />
@@ -18,6 +21,9 @@
         <form-update />
       </v-tab-item>
       <v-tab-item value="tab-auto-labeling">
+        <config-list />
+      </v-tab-item>
+      <v-tab-item value="tab-auto-labeling-training">
         <config-list />
       </v-tab-item>
     </v-tabs-items>
