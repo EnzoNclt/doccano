@@ -46,7 +46,7 @@
         />
       </v-dialog>
     </v-card-title>
-    <document-list
+    <task-list
       v-model="selected"
       :items="item.items"
       :is-loading="isLoading"
@@ -60,7 +60,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import _ from 'lodash'
-import DocumentList from '@/components/example/DocumentList.vue'
+import TaskList from '@/components/example/TaskList.vue'
 import FormDelete from '@/components/example/FormDelete.vue'
 import FormDeleteBulk from '@/components/example/FormDeleteBulk.vue'
 import FormDownload from '@/components/example/FormDownload.vue'
@@ -71,7 +71,7 @@ export default Vue.extend({
   layout: 'project',
 
   components: {
-    DocumentList,
+    TaskList,
     FormDelete,
     FormDeleteBulk,
     FormDownload,
